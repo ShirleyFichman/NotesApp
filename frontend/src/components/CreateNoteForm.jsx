@@ -17,13 +17,12 @@ function CreateNoteForm() {
             .then((res) => {
                 if (res.status === 201) alert("Note created!");
                 else alert("Failed to make note.");
-                getNotes();
             })
             .catch((err) => alert(err));
     };
 
     return (
-        <form onSubmit={handleSubmit} className="bg-white p-4 rounded shadow-md">
+        <form onSubmit={handleSubmit} className="bg-white p-4 rounded shadow-md w-72">
             <label htmlFor="title">Title:</label>
             <br />
             <input
@@ -46,11 +45,7 @@ function CreateNoteForm() {
                 className="w-full p-2 mb-4 border rounded"
             ></textarea>
             <br />
-            <input
-                type="submit"
-                value="Submit"
-                className=""
-            />
+            <button type="submit" className="bg-gray-300 font-semibold rounded text-sm  w-28 h-7 text-white">Add New Note</button>
         </form>
     );
 }
