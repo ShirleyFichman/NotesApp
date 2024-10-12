@@ -33,8 +33,8 @@ function Form({ route, method }) {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
-            <h1>{name}</h1>
+        <form onSubmit={handleSubmit} className="p-4 flex flex-col gap-4">
+            <h1 className="">{name}</h1>
             <input
                 type="text"
                 value={username}
