@@ -6,8 +6,8 @@ const Navbar = () => {
 
   return (
     <nav className="flex justify-between items-center px-4 py-2 bg-gray-100 shadow-sm">
-      <div className="font-semibold hover:font-bold">
-        <a href="/">Home</a>
+      <div className="font-bold text-xl">
+        <a href="/">Notes App</a>
       </div>
 
       <div>
@@ -15,7 +15,7 @@ const Navbar = () => {
           <a href="/logout" className='hover:font-bold'>Logout</a>
         ) : (
           <>
-            <a href="/login" className='hover:font-bold'>Login</a>
+            <a href="/login" className='hover:font-bold'>Log in</a>
             <span> / </span>
             <a href="/register" className='hover:font-bold'>Register</a>
           </>
