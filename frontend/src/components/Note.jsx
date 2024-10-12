@@ -11,7 +11,7 @@ function Note({ note, onDelete }) {
             </div>
             <div className="flex justify-between items-end mt-auto">
                 <p className="text-xs">{formattedDate}</p>
-                <button className="text-white rounded-full text-sm bg-black size-11" onClick={() => onDelete(note.id)}>
+                <button className="text-white rounded-full text-xs bg-black size-11" onClick={() => onDelete(note.id)}>
                     Delete
                 </button>
             </div>
