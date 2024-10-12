@@ -15,7 +15,7 @@ const Navbar = () => {
           <a href="/logout" className='hover:font-bold'>Logout</a>
         ) : (
           <>
-            <a href="/login" className='hover:font-bold'>Login</a>
+            <a href="/login" className='hover:font-bold'>Log in</a>
             <span> / </span>
             <a href="/register" className='hover:font-bold'>Register</a>
           </>

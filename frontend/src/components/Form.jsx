@@ -10,7 +10,7 @@ function Form({ route, method }) {
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
 
-    const name = method === "login" ? "Login" : "Register";
+    const name = method === "login" ? "Log In" : "Register";
 
     const handleSubmit = async (e) => {
         setLoading(true);
@@ -33,24 +33,28 @@ function Form({ route, method }) {
     };
 
     return (
-        <form onSubmit={handleSubmit} className="p-4 flex flex-col gap-4">
-            <h1 className="">{name}</h1>
+        <form onSubmit={handleSubmit} className="p-6 flex flex-col gap-4 bg-gray-50 w-96 h-80 ring-1 ring-gray-100 rounded-lg">
+            <h1 className="font-bold text-lg">{name}</h1>
+            <label className="text-xs">Your username:</label>
             <input
                 type="text"
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
-                placeholder="Username"
+                className="bg-white w-72 ring-1 ring-gray-100 h-9"
             />
+            <label className="text-xs">Your password:</label>
             <input
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                placeholder="Password"
+                className="bg-white w-72 ring-1 ring-gray-100 h-9"
             />
             {loading && <LoadingIndicator />}
-            <button type="submit">
-                {name}
-            </button>
+            <div className="flex justify-center mt-6">
+                <button type="submit" className="bg-blue-500 text-white rounded-full w-28 h-12 shadow-md hover:font-bold">
+                    {name}
+                </button>
+            </div>
         </form>
     );
 }
