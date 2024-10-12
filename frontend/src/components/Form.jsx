@@ -40,20 +40,20 @@ function Form({ route, method }) {
                 type="text"
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
-                className="bg-white w-72 ring-1 ring-gray-100 h-9"
+                className="bg-white w-72 ring-1 ring-gray-100 h-9 text-sm pl-2"
             />
             <label className="text-xs">Your password:</label>
             <input
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="bg-white w-72 ring-1 ring-gray-100 h-9"
+                className="bg-white w-72 ring-1 ring-gray-100 h-9  text-sm pl-2"
             />
-            {loading && <LoadingIndicator />}
-            <div className="flex justify-center mt-6">
-                <button type="submit" className="bg-blue-500 text-white rounded-full w-28 h-12 shadow-md hover:font-bold">
+             <div className="flex justify-center mt-6">
+                {loading ? (<LoadingIndicator />) : 
+                (<button type="submit" className="bg-blue-500 text-white rounded-full w-28 h-12 shadow-md hover:font-bold">
                     {name}
-                </button>
+                </button>)}   
             </div>
         </form>
     );
